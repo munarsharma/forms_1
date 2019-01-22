@@ -1,6 +1,7 @@
 import React from "react";
 import Results from "./results.js";
-
+import MarsFormRadio from "./MarsMissionRadio.js";
+import MarsMissionCheckBox from "./MarsMissionCbox.js";
 const months = [
   "Jan",
   "Feb",
@@ -26,7 +27,7 @@ for (let x = 1910; x < 2007; x++) {
   years.push(x);
 }
 
-const countries = require("./countries.json");
+const countries = require("../countries.json");
 
 const catFood = ["Dry", "Semi-Moist", "Wet", "What the hooMans eat"];
 
@@ -41,6 +42,13 @@ class MarsForm extends React.Component {
       country: "",
       diet: "",
       texts: "",
+      breathe: "",
+      maritalStatus: "",
+      stress: "",
+      claustrophobic: "",
+      famHistory: "",
+      famLine: "",
+      education: "",
       formSubmitted: false,
       formCompleted: false
     };
@@ -151,7 +159,19 @@ class MarsForm extends React.Component {
 
             <br />
             <br />
-
+            <MarsFormRadio
+              clicked={this.handleChange}
+              breathe={this.state.breathe}
+              maritalStatus={this.state.maritalStatus}
+              stress={this.state.stress}
+              claustrophobic={this.state.claustrophobic}
+            />
+            <MarsMissionCheckBox
+              checked={this.handleChange}
+              famHistory={this.state.famHistory}
+              famLine={this.state.famLine}
+              education={this.state.education}
+            />
             <button onClick={this.handleSubmit} id="submit" type="submit">
               Submit
             </button>
@@ -170,6 +190,13 @@ class MarsForm extends React.Component {
           country={this.state.country}
           diet={this.state.diet}
           texts={this.state.texts}
+          breathe={this.state.breathe}
+          maritalStatus={this.state.maritalStatus}
+          stress={this.state.stress}
+          claustrophobic={this.state.claustrophobic}
+          famHistory={this.state.famHistory}
+          famLine={this.state.famLine}
+          education={this.state.education}
         />
       );
 

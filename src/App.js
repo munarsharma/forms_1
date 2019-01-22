@@ -1,7 +1,6 @@
 import React, { Component } from "react";
-import logo from "./logo.svg";
 import "./App.css";
-import MarsForm from "./forms.js";
+import MarsForm from "./components/MarsMissionI.js";
 
 class App extends Component {
   render() {

@@ -59,6 +59,10 @@ h2 {
   border-bottom: 1px solid #d2691e;
   color: hsl(10, 50%, 40%);
 }
+
+form {
+  font-family: "ZCOOL XiaoWei", serif;
+}
 #inputBox1 {
   width: 72%;
   height: 120px;
@@ -75,6 +79,10 @@ h2 {
   background-color: hsl(25, 100%, 40%);
   border-radius: 5px;
   opacity: 0.8;
+}
+
+ul {
+  list-style-type: none;
 }
 /* form {
   padding: 12px;
